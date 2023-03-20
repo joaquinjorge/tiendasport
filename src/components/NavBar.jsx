@@ -1,5 +1,16 @@
+import {Link} from "react-router-dom"
 import React from 'react'
 import CartWidget from './CartWidget'
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  Button,
+  
+} from "@chakra-ui/react";
+import { ChevronDownIcon } from "@chakra-ui/icons";
+
 
 
 const NavBar = () => {
@@ -8,10 +19,11 @@ const NavBar = () => {
     <header>
     <div className='header'>
     <div className='logo'>
-        <a className='inicio' href="">
+       <Link to="/"> <div className='inicio' href="">
             <img src="https://res.cloudinary.com/dtzqfg4nr/image/upload/v1677525893/store_xqcvtk.png" alt="logo"/>
             <h1>TiendaSport</h1>
-        </a>
+        </div>
+        </Link>
 
 
     </div>
@@ -25,16 +37,26 @@ const NavBar = () => {
       <label htmlFor="">Buscar:</label>
       <input id="inputBuscar" htmlFor="search"/>
   </form>
-  <div>
-      <label className='filtrado' htmlFor="shop">Categoria:</label>
+  <div className="divFiltrar">
+    <p>Filtrar por:</p>
+  <Menu className='menuCat' >
+  <MenuButton  className='botonCat' as={Button} rightIcon={<ChevronDownIcon />}>
+    categorias
+  
+  </MenuButton>
+  <MenuList className="listaCat">
+   <Link  className='itemCat'  to={`/categoria/${"remeras"}`}> <MenuItem className='itemCats'>Remeras</MenuItem></Link>
+   <Link className='itemCat' to={`/categoria/${"camperas"}`}> <MenuItem className='itemCats'>Camperas</MenuItem></Link>
+   <Link className='itemCat' to={`/categoria/${"botines"}`}> <MenuItem className='itemCats'>Botines</MenuItem></Link>
+   <Link className='itemCat'  to={`/categoria/${"shorts"}`}> <MenuItem className='itemCats'>Shorts</MenuItem></Link>
+   <Link className='itemCat' to="/productos"> <MenuItem className='itemCats'>Mostrar todo</MenuItem></Link>
+  </MenuList>
+</Menu>
 
-      <select id="shop">
-          <option defaultValue="selected">...</option>
-          <option value="remera">Remeras</option>
-          <option value="campera">Camperas</option>
-          <option value="botines">Botines</option>
-          <option value="short">Shorts</option>
-      </select>
+      
+       
+          
+    
   </div>
 </div>
 

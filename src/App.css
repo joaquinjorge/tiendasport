@@ -99,7 +99,7 @@ header {
 }
 
 .hero {
-  background-color: #45CB85;
+  background-color: #45c2cb;
   height: 60px;
   display: flex;
  
@@ -111,9 +111,19 @@ header {
   margin: auto;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 1.8rem;
   color: #00020f;
+  background-color: #6A7FDB;
+  border: #6A7FDB 2px solid;
 }
+.tituloCat{  text-align: center;
+  margin: auto;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #00020f;
+  background-color:beige;
+  border:2px solid;border: 4px solid  #6A7FDB}
 
 
 .nav {
@@ -126,6 +136,9 @@ header {
   position: relative;
   background-color: #6A7FDB;
   border: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 
@@ -142,8 +155,63 @@ header {
   align-items: center;
   justify-content: center;
 }
+.contenedor {
+    width: 100%;
+    min-height: 68vh;
+    display: flex;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    margin: auto;
+}
 
+.producto {
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin-top: 40px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background-color: #6A7FDB;
+}
 
+.producto img {
+    height: 300px;
+}
+
+.producto h3 {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.producto p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.botonCarro {
+    height: auto;
+    font-size: 1.3rem;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.botonCarro i {
+    font-size: 2rem;
+    margin-left: 8px;
+}
+
+.divFiltrar{display: flex;align-items: center;gap: 8px;z-index: 1;}
+.divFiltrar p{font-size: 20px;}
+.botonCat{background-color: beige ;border-radius: 10px;}
+.itemCat{text-decoration: none;color: black;}
+.itemCats{background-color:white ;
+border-radius: 5px;padding: 5px;font-size: 15px;font-weight: 600;}
 
 @media only screen and (max-width: 397px) {
   .nav {
@@ -158,6 +226,12 @@ header {
       margin: auto;
   }
 }
+.imagenPrincipal{height: 100%;
+width: 100%;display: flex;background: linear-gradient(90deg, #326c9c, #153131);}
+.imagenPrincipal img{height: 82.81vh;width: 50%;margin: auto;}
+@media only screen and (max-width: 1147px) {
+  .imagenPrincipal img{width: 100%;margin: auto;}
+}
 
 
 
@@ -167,6 +241,7 @@ header {
       right: 0px;
       
       opacity: 0.8;
+      z-index: 3;
   }
 
   .enlaces a {
@@ -204,4 +279,257 @@ header {
   }
 
  
+}
+
+.error{color: white;display: flex;flex-direction: column;
+  justify-content: center;align-items: center;height: 600px;gap: 20px;font-size: 30px;}
+
+  .cartLink{text-decoration: none;}
+
+  .form-container {
+    width: 300px;
+    background: linear-gradient(180deg,rgb(74, 64, 149) 25%,rgb(255, 255, 255) 20%);
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    margin: auto;
+  }
+  @media only screen and (max-width: 321px) {
+    .form-container {width:90% ;}
+  }
+  
+  .form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+  
+  .form-container p {
+   
+   
+    font-size: 30px;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+  }
+  
+  .form-container label {
+    color: rgb(40, 42, 44);
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+  
+  .form-container .input {
+    padding: 10px;
+    height: 35px;
+    border: none;
+    background-color: rgb(224, 231, 236);
+  }
+  
+  .form-container .input:focus {
+    outline: none;
+  }
+  
+  .form-container button {
+    border: none;
+    height: 35px;
+    margin-top: 30px;
+    background: rgb(111, 45, 234);
+    color: white;
+    font-size: 16px;
+  }
+  .formulario{height: 100%;margin-top: 200px;display: flex;}
+
+
+
+  .itemDetailContenedor{ margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: #153131;}
+
+
+
+    .container {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 900px;
+      height: 600px;
+      background:#57E2E5;
+      margin: 20px;
+  }
+  
+  .container .imgBx {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      height: 100%;
+      background: #6A7FDB;
+      transition: .3s linear;
+  }
+  
+  .container .imgBx:before {
+      content: 'tiendaSport';
+      position: absolute;
+      top: 0px;
+      left: 24px;
+      color: #000;
+      opacity: 0.2;
+      font-size: 8em;
+      font-weight: 800;
+  }
+  
+  .container .imgBx img {
+      position: relative;
+      width: 550px;
+      transform: rotate(-30deg);
+      left: -60px;
+      transition: .9s linear;
+  }
+
+  @media only screen and (min-width: 1081px) {
+    #image1{left: -70px;}
+    #image2{left: -70px;}
+    #image3{left: -70px;}
+    #image4{left: -70px;}
+    #image5{left: -70px;}
+    #image6{left: -70px;}
+    #image9{left: -70px;}
+    #image10{left: -70px;}
+    #image11{left: -70px;}
+    #image12{left: -70px;}
+    #image13{left: -70px;}
+    #image16{left: -70px;}
+    #image17{left: -70px;}
+    #image18{left: -70px;}
+    #image19{left: -70px;}
+  }
+ 
+  .container .details {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      height: 100%;
+      box-sizing: border-box;
+      padding: 40px;
+  }
+  
+  .container .details h2{
+      margin: 0;
+      padding: 0;
+      font-size: 2.4em;
+      line-height: 1em;
+      color: #030000;
+  }
+  
+  .container .details h2 span {
+      font-size: 0.4em;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #31252f;
+  }
+  
+  .container .details p {
+      max-width: 85%;
+      margin-left: 15%;
+      color: #333;
+      font-size: 15px;
+      margin-bottom: 36px;
+  }
+  
+  .container .details h3 {
+      margin: 0;
+      padding: 0;
+      font-size: 2.5em;
+      color:black;
+      float: left;
+  }
+  .container .details button {
+      background: #6A7FDB;
+      color: black;
+      border: none;
+      outline: none;
+      padding: 15px 20px;
+      margin-top: 5px;
+      font-size: 16px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 600;
+      border-radius: 40px;
+      float: right;
+  }
+  
+  
+  
+ .seguirViendo{  
+  margin: auto;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #00020f;
+  background-color:beige;
+  border:2px solid;border: 4px solid  #6A7FDB
+  ;display: flex;}
+  
+
+  @media (max-width: 1080px) {
+    .container {
+      
+        height: auto;
+        width: 95%;
+    }
+    .container .imgBx {
+        padding: 0px;
+        box-sizing: border-box;
+        width: 100% !important;
+        height: auto;
+        text-align: center;
+        overflow: hidden;
+    }
+    .container .imgBx img {
+        left: initial;
+        max-width: 100%;
+        transform: rotate(0deg);
+    }
+    .details {
+        width: 100% !important;
+        height: auto;
+        padding: 0px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .details h2 {
+      width: 100% !important;
+      height: auto;
+      padding: 0px;
+      display: flex;
+      flex-wrap: wrap;
+  }
+    .container .details p {
+        margin-left: 0;
+        max-width: 100%;
+    }
+}
+@media only screen and (max-width: 403px) {
+  .container .details h2 {
+    font-size: 1rem;
+}
+.container .details h2 span {
+  font-size: 0.8rem;
+}
+.container .details p{
+  font-size: 0.8rem;
+}
 }
