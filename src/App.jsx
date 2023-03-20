@@ -21,7 +21,7 @@ function App() {
           path="/"
           element={<Catalogo greeting={"Nuestros Productos"} />}
         />
-        <Route exact path="/productos" element={<ItemListContainer/>}/>
+        <Route exact path="/productoss" element={<ItemListContainer/>}/>
         <Route exact path="/categoria/:categoria" element={<ItemListContainer/>}/>
         <Route exact path="/id/:id" element={<ItemDetailContainer/>}/>
         <Route exact path="/carrito" element={<Cart/>}/>

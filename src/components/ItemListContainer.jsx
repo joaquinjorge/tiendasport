@@ -6,6 +6,7 @@ import productos from "../../productos.json"
 
 
 const ItemListContainer = () => {
+
   const {categoria}=useParams()
   
       

@@ -10,7 +10,7 @@ const ItemDetailContainer = () => {
     
    
     <div>
-    <Link to="/productos">  <button className='seguirViendo'>Seguir viendo</button></Link>
+    <Link to="/productoss">  <button className='seguirViendo'>Seguir viendo</button></Link>
       <ItemDetail productos={productos}/>
       </div>
   )
