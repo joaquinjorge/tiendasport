@@ -7,26 +7,31 @@ import ItemDetailContainer from "./components/ItemDetailContainer";
 import ItemListContainer from "./components/ItemListContainer";
 
 import NavBar from "./components/NavBar";
+import ShoppingCartProvider from "./context/ShoppingCartProvider";
 
 function App() {
- 
   return (
-   
-    <BrowserRouter>
-      <NavBar />
-      <Routes>
-      <Route path="*" element={<Error404/>}/>
-        <Route
-          exact
-          path="/"
-          element={<Catalogo greeting={"Nuestros Productos"} />}
-        />
-        <Route exact path="/productoss" element={<ItemListContainer/>}/>
-        <Route exact path="/categoria/:categoria" element={<ItemListContainer/>}/>
-        <Route exact path="/id/:id" element={<ItemDetailContainer/>}/>
-        <Route exact path="/carrito" element={<Cart/>}/>
-      </Routes>
-    </BrowserRouter>
+    <ShoppingCartProvider>
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="*" element={<Error404 />} />
+          <Route
+            exact
+            path="/"
+            element={<Catalogo greeting={"Nuestros Productos"} />}
+          />
+          <Route exact path="/productos" element={<ItemListContainer />} />
+          <Route
+            exact
+            path="/categoria/:categoria"
+            element={<ItemListContainer />}
+          />
+          <Route exact path="/id/:id" element={<ItemDetailContainer />} />
+          <Route exact path="/carrito" element={<Cart />} />
+        </Routes>
+      </BrowserRouter>
+    </ShoppingCartProvider>
   );
 }
 

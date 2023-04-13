@@ -1,19 +1,40 @@
-import React from 'react'
-import ItemDetail from './ItemDetail'
-import { Link } from "react-router-dom";
-import productos from "../../productos.json";
+import { useState, useEffect } from "react";
+import ItemDetail from "./ItemDetail";
+import { Link, useParams } from "react-router-dom";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
-   
-    
-  return (
-    
-   
-    <div>
-    <Link to="/productoss">  <button className='seguirViendo'>Seguir viendo</button></Link>
-      <ItemDetail productos={productos}/>
-      </div>
-  )
-}
+  const { id } = useParams();
+  const [producto, setProducto] = useState([]);
+  useEffect(() => {
+    const db = getFirestore();
 
-export default ItemDetailContainer
+    const ropaRef = doc(db, "ropa", `${id}`);
+
+    getDoc(ropaRef).then((snapshot) => {
+      setProducto({ id: snapshot.id, ...snapshot.data() });
+    });
+  }, []);
+
+  return (
+    <div style={{ backgroundColor: "black" }}>
+      <div
+        style={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          flexWrap: "wrap",
+        }}
+      >
+        {" "}
+        <Link to="/productos">
+          {" "}
+          <button className="seguirViendo">Seguir viendo</button>
+        </Link>
+      </div>
+      {<ItemDetail producto={producto} />}
+    </div>
+  );
+};
+
+export default ItemDetailContainer;

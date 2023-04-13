@@ -1,14 +1,26 @@
-import React from 'react'
-import {Link} from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 
-const Item = ({id,categoria,nombre,stock,precio,imagen}) => {
+const Item = ({ id, nombre, stock, imagen }) => {
   return (
-    <div id={id} key={id} className='producto'>
-    <img src={imagen} alt="imageproduct" />
-    <h3>Stock:{stock}</h3>
-    <Link to={`/id/${id}`}><button className='botonCarro'>Ver Detalles</button></Link>
+    <div className="catalogo-productos__item">
+      <div className="product-image-container">
+        <img className="product-image" src={imagen} alt={nombre} />
+      </div>
+      <div className="catalogo-productos__item-overlay">
+        <div className="product-stock">
+          <span>Stock:</span>
+          <span>{stock}</span>
+        </div>
+        <Link to={`/id/${id}`}>
+          <button className="catalogo-productos__item-button">
+            Ver Detalles
+          </button>
+        </Link>
+      </div>
+      <div className="catalogo-productos__item-fondo"></div>
     </div>
-  )
-}
+  );
+};
 
-export default Item
+export default Item;
