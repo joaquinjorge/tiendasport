@@ -3,7 +3,8 @@ _Desarollada con react - [Vite](https://vitejs.dev/)_
 
 _Tiendasport es un ecommerce diseñado para la venta de productos deportivos en línea. La página web utiliza Firestore como base de datos y está diseñada con CSS sin librerías externas. Además, cuenta con la funcionalidad de enviar un correo electrónico al momento de realizar una compra a través de la función **handleSubmit()**. También se incluye un archivo PDF para descargar con información detallada sobre la compra._
 
-[screen-capture (1).webm](https://user-images.githubusercontent.com/112964370/231614099-070961c3-f6ae-42d1-bb88-13f95ed9de01.webm)
+[screen-capture (8).webm](https://user-images.githubusercontent.com/112964370/231614493-249e8a85-5f7c-416a-90e7-734c50f33b15.webm)
+
 
 
 ## Funcionalidades
